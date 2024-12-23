@@ -23,26 +23,3 @@ def get_days_from_today(needdate):
 print(get_days_from_today("2024-12-23"))
 
 
-
-
-
-#Homework Module_3_hmw_2 з коректними параметрами
-import random
-
-def get_numbers_ticket(min, max, quantity):
-    """
-    Перевірямо спочатку коректность параметрів
-    Повертаємо порожній список, якщо параметри некоректні
-    Генеруємо унікальні випадкові числа в заданому діапазоні
-    Повертаємо відсортований список чисел
-    """
-    if min < 1 or max > 1000 or quantity < 1 or quantity > (max - min + 1):
-        return []  
-    numbers = random.sample(range(min, max + 1), quantity)
-    return sorted(numbers)
-
-# Приклад використання:
-print(get_numbers_ticket(1, 49, 6))  # Для лотереї з 6 чисел від 1 до 49
-print(get_numbers_ticket(1, 36, 5))  # Для лотереї з 5 чисел від 1 до 36
-print(get_numbers_ticket(1, 1000, 6))  # Для лотереї з 6 чисел від 1 до 1000
-
